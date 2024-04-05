@@ -19,6 +19,15 @@ app.use(
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+
+app.get('/',(req,res) =>{
+    res.json({
+        success:true,
+        message:"YOU ARE ALSO A PART OF PLAN"
+    });
+});
+
+
 app.use("/api/v1/message" ,messageRouter)
 
 
